@@ -17,5 +17,6 @@
         <property name="hbm2ddl.auto">create</property>
 
         <mapping class="kr.ac.hansung.Product" />
+        <mapping class="kr.ac.hansung.Category" />
     </session-factory>
 </hibernate-configuration>

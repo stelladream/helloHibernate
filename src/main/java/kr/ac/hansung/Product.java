@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@ToString
+//@ToString
 
 @Entity
 @Table(name="product")
@@ -22,4 +22,19 @@ public class Product {
     private String name;
     private int price;
     private String Description;
+
+    @ManyToOne
+    @JoinColumn(name="category_id")
+    private Category category;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", Description='" + Description + '\'' +
+                ", category=" + category.getName() +
+                '}';
+    }
 }
